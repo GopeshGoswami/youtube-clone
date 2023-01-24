@@ -1,13 +1,180 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(114, 113, 113);
+  border-radius: 10px;
+  height: 200px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.category-btn:hover {
+  background-color: #2a2a2a !important;
+  color: white !important;
+}
+
+.category-btn:hover span {
+  color: white !important;
+}
+
+.react-player {
+  height: 77vh !important;
+  width: 100% !important;
+}
+
+.search-bar {
+  border: none;
+  outline: none;
+  width: 350px;
+  background-color: #2a2a2a;
+  color: white;
+  font-weight: bold;
+}
+
+.category-btn {
+  font-weight: bold !important;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+
+  padding: 7px 15px;
+  margin: 10px 0px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 900px) {
+  .category-btn {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .copyright {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .scroll-horizontal {
+    overflow: auto !important;
+  }
+
+  .react-player {
+    height: 45vh !important;
+  }
+  .search-bar {
+    width: 200px;
+  }
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  transition: 400ms ease-in-out;
+}
+
+.hidden{
+  display: none;
+  transition: 400ms ease-in-out;
+}
+
+.footer-div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: gray;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(20,184,166,1) 0%, rgba(6,182,212,1) 100%);
+}
+.footer-p{
+  /* margin-left: 15rem; */
+  /* margin-right: 15rem; */
+  font-size: small;
+  width: 35vw;
+  display: flex;
+  gap: 2;
+  align-items: center;
+  justify-content: center;
+}
+.footer-p a{
+}
+.github-icon{
+  color: white;
+  /* font-size: larger; */
+  padding: 0;
+  font-size: 2rem; 
+  /* line-height: 2.25rem;  */
+
+}
+.git-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20vw;
+}
+
+.git-div p{
+  padding-right: 1rem;
+}
+
+.github-icon:hover{
+  color: black;
+  transition: 300ms ease-in-out;
+  
+}
+
+.footer-div button{
+  position: absolute;
+  right: 0.7rem;
+  bottom: 10px;
+}
+
+.footer-close{
+  position: absolute;
+  bottom: -40px;
+  right: -95vw;
+
+}
+/* absolute right-[0.7rem] bottom-10" */
+.close-div{
+  position: relative;
 }
